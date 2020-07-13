@@ -1,0 +1,32 @@
+﻿<Window x:Class="tapon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tapon"
+        mc:Ignorable="d"
+        Title="PigeonTap" 
+        ResizeMode="CanMinimize" Height="450" Width="650">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Grid.Column="2" Margin="19,184,44,185">
+            <TextBlock Margin="10 0 10 0">Pigeon-Tap, Daily Check-In Dedication.</TextBlock>
+        </Viewbox>
+
+        <Button x:Name="Check_In" Margin="250,320,248,70" Grid.Column="2" Click="Button_Click">Check-In</Button>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="450,218,0,0" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+        <Image Grid.Column="2" Margin="241,34,248,248" Source="logo2.png" Stretch="Fill"/>
+        <TextBlock Name="cTime" Height="42" Width="110" Grid.Column="2" Margin="189,273,345,120"/>
+        <Label Grid.ColumnSpan="3" Content="Next Check-In:" HorizontalAlignment="Center" Height="26" Margin="-200,250,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label Grid.ColumnSpan="3" Content="Total Check In Days:" HorizontalAlignment="Center" Height="26" Margin="200,250,0,0" VerticalAlignment="Top" Width="114"/>
+    </Grid>
+</Window>
